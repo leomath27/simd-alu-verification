@@ -1,0 +1,15 @@
+------------------------------------------------------------
+SIMD_ALU regression  seed=1  cycles=96510
+  transactions accepted  : 81433
+  outputs checked        : 81280
+  offered during stall   : 9110   (must be ignored)
+  in-flight dropped @rst : 131
+  scoreboard errors      : 0  (data 0, flags 0, illegal 0, valid-timing 0, spurious 0)
+  SVA failures           : 0
+COV  opcode x element-width            :   80 /   80 bins  (100.0%)
+COV  opcode x sew x class(a) x class(b): 2736 / 2736 bins  (100.0%)
+COV  back-to-back opcode transitions   :  400 /  400 bins  (100.0%)
+COV  overflow/saturation flag set/clear:   48 /   48 bins  (100.0%)
+COV  pipeline / protocol scenarios     :    8 /    8 bins  (100.0%)
+COV  TOTAL functional coverage         : 3272 / 3272 bins  (100.0%)
+RESULT: PASS
