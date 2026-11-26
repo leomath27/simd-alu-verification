@@ -1,5 +1,13 @@
 # SIMD ALU - Constrained-Random Verification with Assertions
 
+> **At a glance:** 20/20 seeds pass (1.6 M+ instructions checked) | **100% functional coverage** (3,272 bins) |
+> **13/13 injected RTL bugs caught** | ~30 SVA properties (~330 generated instances) | open-source Verilator flow
+
+**Highlights**
+- Constrained-random, self-checking SystemVerilog testbench with an independent reference model and 18 stimulus phases.
+- Bound SVA suite covering the pipeline handshake, stall/reset behavior and per-lane invariants (no carry leakage, saturation rails).
+- Mutation harness showing corner-biased stimulus catches a 64-bit saturation corner that pure random misses.
+
 Verification of a 64-bit, 2-stage pipelined **SIMD ALU** (8x8 / 4x16 / 2x32 / 1x64 lanes, 19 opcodes,
 per-lane overflow/saturation flags, stall + synchronous reset) using a self-checking
 **SystemVerilog constrained-random testbench**, an independent **reference model**, a bound
